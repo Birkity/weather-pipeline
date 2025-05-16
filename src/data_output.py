@@ -68,8 +68,8 @@ def plot_visualizations(df, output_dir):
     
     # Visualization 3: Humidity vs Wind Speed (Scatter Plot)
     plt.figure(figsize=(10, 6))
-    sns.scatterplot(data=df, x='humidity_percent', y='wind_speed_kph', hue='city', size='temperature_celsius', 
-                    palette='viridis', sizes=(20, 200))
+    sns.scatterplot(data=df, x='humidity_percent', y='wind_speed_kph', hue='city', 
+                    size='temperature_celsius', palette='viridis', sizes=(20, 200))
     plt.title('Humidity vs Wind Speed by City', fontsize=14)
     plt.xlabel('Humidity (%)', fontsize=12)
     plt.ylabel('Wind Speed (kph)', fontsize=12)
@@ -80,7 +80,8 @@ def plot_visualizations(df, output_dir):
     # Visualization 4: Weather Condition Distribution (Pie Chart)
     weather_counts = df['weather_condition'].value_counts()
     plt.figure(figsize=(8, 8))
-    plt.pie(weather_counts, labels=weather_counts.index, autopct='%1.1f%%', startangle=90, colors=sns.color_palette('pastel'))
+    plt.pie(weather_counts, labels=weather_counts.index, autopct='%1.1f%%', 
+            startangle=90, colors=sns.color_palette('pastel'))
     plt.title('Weather Condition Distribution', fontsize=14)
     plt.tight_layout()
     plt.savefig(os.path.join(output_dir, 'weather_condition_distribution.png'))
