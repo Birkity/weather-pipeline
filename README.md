@@ -15,7 +15,7 @@ This repository contains a data pipeline to ingest, clean, transform, and analyz
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Birkity/weather-pipeline.git
    cd weather_pipeline
    ```
 
